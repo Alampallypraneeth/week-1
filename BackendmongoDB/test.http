@@ -1,0 +1,70 @@
+//Read all the products
+###
+GET http://localhost:4000/product-api/products
+
+
+//read product by id
+###
+GET http://localhost:4000/product-api/products/697dd1f1fe829484384c99af
+
+
+
+//create product
+###
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "ID": "S23",
+    "Name": "Samsung S23",
+    "price": 95000
+}
+
+
+//update product by id
+###
+PUT http://localhost:4000/product-api/products/697dd1f1fe829484384c99af
+Content-Type: application/json
+
+{
+    "ID": "S23",
+    "Name": "Samsung S25",
+    "price": 95000
+}
+
+//delete product by id
+###
+DELETE http://localhost:4000/product-api/products/697dd1f1fe829484384c99af
+
+
+
+
+
+###Read all the users
+GET http://localhost:4000/user-api/users
+
+###Read users by objectId
+GET http://localhost:4000/user-api/users/697dbfb8a85db8b7064f13cb
+
+###create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+"username": "akhilesh",
+"password": "akhilesh02",
+  "age":20
+}
+
+###Update user by id
+PUT http://localhost:4000/user-api/users/697dbfb8a85db8b7064f13cb
+Content-Type: application/json
+
+{
+  "username": "akhilesh",
+  "password": "akhilesh02",
+  "age":22
+}
+
+###Delete user by id
+DELETE http://localhost:4000/user-api/users/697dc8d184bf9a2715a59816

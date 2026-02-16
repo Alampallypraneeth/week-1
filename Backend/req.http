@@ -1,0 +1,84 @@
+GET   http://127.0.0.1:3000/user-api/users
+
+
+
+###
+POST  http://127.0.0.1:3000/user-api/users
+Content-Type: application/json
+
+{
+  "id":100,
+  "name": "Akhilesh Goud",
+  "age": 20
+}
+
+###
+PUT   http://127.0.0.1:3000/user-api/users/id
+Content-Type: application/json
+
+{
+  "id":200,
+  "name": "Goud",
+  "age": 25
+}
+
+
+
+
+###
+GET http://127.0.0.1:3000/user-api/users/200
+###
+DELETE   http://127.0.0.1:3000/user-api/users/100
+
+
+
+
+
+
+
+
+
+
+
+
+### Get all products
+GET http://localhost:3000/product-api/products
+
+
+### Create product
+POST http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "name": "Laptop",
+  "price": 100000,
+  "brand": "Dell G15"
+}
+
+### Create another product
+POST http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+  "productId": 2,
+  "name": "Mobile",
+  "price": 30000,
+  "brand": "Samsung S23"
+}
+
+
+### Get product by id
+GET http://localhost:3000/product-api/products/1
+
+### Update product
+PUT http://localhost:3000/product-api/products/1
+Content-Type: application/json
+
+{
+  "price": 58000
+}
+
+
+### Delete product
+DELETE http://localhost:3000/product-api/products/2
