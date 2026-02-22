@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: gray;
+    height: 200px;
+    text-align:left;
+}
+h1{
+    padding: 50px 10px 10px 50px;
+}
+p{
+    padding-inline: 50px;
+}
+button{
+    margin-left: 50px;
+    background-color: rgb(16, 16, 194);
+    color: white;
+}
+main{
+    margin: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: row;
+}
+.data p{
+    margin-top: 10px;
+text-align: initial;
+}
+.data button{
+    margin-top: 20px;
+    background-color: grey;
+}

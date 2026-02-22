@@ -1,0 +1,132 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    color:rgb(67, 65, 65);
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+.header {
+    background: url('https://www.nhm.ac.uk/content/dam/nhm-www/discover/what-is-space/what-is-space-milky-way-full-width.jpg.thumb.1920.1920.png') no-repeat center/cover;
+    height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.header-content {
+    position: relative;
+
+}
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.btn {
+    background:cadetblue;
+    padding: 10px 25px;
+    border:none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.outdoor {
+    display: flex;
+    gap: 40px;
+    padding: 60px 0;
+    align-items: center;
+}
+
+.outdoor-text {
+    flex: 1;
+}
+.outdoor-text h2 {
+    color: rgb(0, 51, 102);
+    margin-bottom: 20px;
+}
+.outdoor-text p {
+    line-height: 1.6;
+    color: #666;
+}
+.outdoor-img {
+    flex: 1;
+}
+.outdoor-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+.tourism {
+    padding: 60px 0;
+}
+
+.tourism h2 {
+    color: rgb(0, 51, 102);
+    margin-bottom: 30px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card {
+    background: #e6edf3;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    background: #dde6ed;
+}
+.card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+.category {
+    padding: 50px 0;
+    text-align: center;
+}
+.tabs {
+    margin-top: 20px;
+}
+.tabs span {
+    margin: 0 15px;
+    cursor: pointer;
+    color: #666;
+}
+.tabs span.active {
+    color: #003366;
+    border-bottom: 3px solid orange;
+    padding-bottom: 5px;
+}
+@media(max-width: 768px) {
+    .outdoor {
+    flex-direction: column;
+    }
+    .grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .grid {
+    grid-template-columns: 1fr;
+    }
+}
