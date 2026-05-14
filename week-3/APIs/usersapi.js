@@ -44,9 +44,9 @@ res.status(200).json({ message: "User Found", payload: user });
 });
 
 // DELETE user (expects id in body)
-userApp.delete("/users/:id", (req, res) => {
-let userId = Number(req.params.id);
-let userIndex = users.findIndex((usr) => usr.id === userId);
+userApp.delete("/users/id", (req, res) => {
+let { id } = req.body;
+let userIndex = users.findIndex((usr) => usr.id === id);
 
 if (userIndex === -1) {
     return res.status(404).json({ message: "User Not Found" });

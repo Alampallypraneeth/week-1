@@ -1,4 +1,4 @@
-import {Schema,model, mongo} from 'mongoose';
+import {Schema,model} from 'mongoose';
 
 //create user schema(username,password,age)
 const userSchema=new Schema({
@@ -6,13 +6,13 @@ const userSchema=new Schema({
         type:String,
         required:[true,'username is required'],
         minLength:[3,"mini length should be 3"],
-        maxLength:[20,"max length is exceeded"]
+        maxLength:[8,"max length is exceeded"]
     },
     password:{
         type:String,
         required:[true,'password is required'],
         minLength:[3,"mini length should be 3"],
-        maxLength:[20,"max length is exceeded"]
+        maxLength:[8,"max length is exceeded"]
     },
     age:{
         type:Number,
@@ -24,5 +24,3 @@ const userSchema=new Schema({
 
 //create user model with the schema
 export const UserModel =model('user',userSchema)
-
-

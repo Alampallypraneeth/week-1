@@ -1,0 +1,34 @@
+###
+POST http://localhost:4000/products-api/products
+Content-Type: application/json
+
+{
+    "productName":"TV",
+    "price":70000,
+    "brand":"samsung Qled"
+}
+
+
+###
+POST http://localhost:4000/users-api/user
+Content-Type: application/json
+
+{
+  "name": "akhilesh021205",
+  "email": "akhilesh@gmail.com",
+  "password": "akhilesh02",
+  "cart": []
+}
+
+###
+GET http://localhost:4000/users-api/users
+
+###
+PUT http://localhost:4000/users-api/user-cart/user-id/6981970a66bcb10b5471d8f2/product-id/6981970666bcb10b5471d8ef
+
+###
+GET http://localhost:4000/users-api/users
+
+### quantity
+PUT http://localhost:4000/users-api/user-cart/user-id/6981970a66bcb10b5471d8f2/product-id/6981970666bcb10b5471d8ef
+

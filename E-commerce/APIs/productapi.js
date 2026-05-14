@@ -12,3 +12,4 @@ prodRoute.post("/products", async (req, res) => {
   });
 });
 
+

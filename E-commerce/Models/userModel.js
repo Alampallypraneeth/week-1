@@ -1,10 +1,11 @@
-import { Schema, model } from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 
-// cart schema
+// Cart schema
 const cartSchema = new Schema({
   product: {
     type: Schema.Types.ObjectId,
-    ref: 'product'   // name of Product model
+    ref: "products",   // product name
+    required: true
   },
   quantity: {
     type: Number,
@@ -12,7 +13,7 @@ const cartSchema = new Schema({
   }
 });
 
-// user schema
+// User schema
 const userSchema = new Schema({
   name: {
     type: String,
@@ -33,4 +34,5 @@ const userSchema = new Schema({
   }
 });
 
-export const UserModel = model("user", userSchema);
+// Export model
+export const UserModel = model("users", userSchema);

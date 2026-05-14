@@ -5,13 +5,13 @@ import { hash } from "bcrypt";
 
 export const userRoute = exp.Router();
 
-
+// GET all users
 userRoute.get("/users", async (req, res) => {
   let users = await UserModel.find();
   res.status(200).json({ message: "All users", payload: users });
 });
 
-
+// CREATE new user
 userRoute.post("/user", async (req, res) => {
   let newUser = req.body;
 
@@ -28,78 +28,58 @@ userRoute.post("/user", async (req, res) => {
   res.status(201).json({ message: "New user created successfully" });
 });
 
-userRoute.put(
-  "/user-cart/user-id/:uid/product-id/:pid",
-  async (req, res) => {
+
+// ADD PRODUCT TO CART (WITH QUANTITY)
+
+userRoute.put("/user-cart/user-id/:uid/product-id/:pid",async (req, res) => {
     try {
-      let { uid, pid } = req.params;
+    let { uid, pid } = req.params;
 
       // check user
-      let user = await UserModel.findById(uid);
-      if (!user) {
+    let user = await UserModel.findById(uid);
+    if (!user) {
         return res.status(404).json({ message: "user not found" });
-      }
+    }
 
       // check product
-      let product = await ProductModel.findById(pid);
-      if (!product) {
+    let product = await ProductModel.findById(pid);
+    if (!product) {
         return res.status(404).json({ message: "product not found" });
-      }
+    }
 
       // check if product already exists in cart
-      let productIndex = user.cart.findIndex(
-        (item) => item.product.toString() === pid
-      );
+    let productIndex = user.cart.findIndex((item) => item.product.toString() === pid);
 
-      if (productIndex > -1) {
+    if (productIndex > -1) {
         // product exists → increment quantity
         user.cart[productIndex].quantity += 1;
-      } else {
+    } else {
         // product not exists → add new product
-        user.cart.push({
-          product: pid,
-          quantity: 1
-        });
-      }
-       
-
-      await user.save();
-
-      res.status(200).json({
-        message: "product added to cart",
-        payload: user.cart
-      });
-    } catch (error) {
-      res.status(500).json({ error: error.message });
+        user.cart.push({product: pid,quantity: 1});
     }
-  }
+
+    await user.save();
+
+    res.status(200).json({message: "product added to cart",payload: user.cart});
+    } catch (error) {
+    res.status(500).json({ error: error.message });
+    }
+}
 );
 
 
 userRoute.get("/user-cart/user-id/:uid", async (req, res) => {
-  let { uid } = req.params;
+let { uid } = req.params;
 
-  let user = await UserModel.findById(uid).populate("cart.product");
-  if (!user) {
+let user = await UserModel.findById(uid).populate("cart.product");
+if (!user) {
     return res.status(404).json({ message: "user not found" });
-  }
+}
 
-  res.status(200).json({
+res.status(200).json({
     message: "user cart fetched",
     payload: user.cart
-  });
+});
 });
 
-
-userRoute.get("/copmare/:pid",async(req,res)=>{
-    let productId=req.params.pid
-    let prod=await ProductModel.findById(productId)
-    if(productId==prod._id){
-        console.log("equal")
-    }else{
-        console.log("notequal")
-    }
-})
-//server
-//mulitiple apis
-//
+// cart1=[4]

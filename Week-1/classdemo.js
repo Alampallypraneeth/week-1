@@ -1,4 +1,10 @@
-// Library Book Management System
+//Library Book Management System
+//Create a Book class and use it to manage a collection of books in a library.
+//requirements: Create a Book class with the following:
+//Properties:title (string)author (string)pages (number)isAvailable (boolean, default: true)
+//Methods:borrow() - Marks the book as not availablereturnBook() - Marks the book as availablegetInfo() - Returns a string with book details (e.g., "The Hobbit by J.R.R. Tolkien (310 pages)")isLongBook() - Returns true if pages > 300, false otherwise
+//creating 5 book objects using the class
+//example:"harry potter","1984","the hobbit","the legend","tomorrow",etc.   
 class Book {
     constructor(title, author, pages, isAvailable = true) {
         this.title = title;
@@ -36,30 +42,25 @@ const book2 = new Book("1984", "George Orwell", 328);
 const book3 = new Book("The Hobbit", "J.R.R. Tolkien", 310);
 const book4 = new Book("The Legend", "Shiva", 250);
 const book5 = new Book("Tomorrow", "John Doe", 150);
-
 // Managing the collection
 const library = [book1, book2, book3, book4, book5];
 
-// Display info of all books
+//display info of all books
 library.forEach(book => {
     console.log(book.getInfo());
 });
-
-// Borrow 2 books and show availability
+//borrow 2 books and show availability
 book1.borrow();
 book3.borrow();
 console.log(`Is "${book1.title}" available?`, book1.isAvailable);
 console.log(`Is "${book3.title}" available?`, book3.isAvailable);
-
-// Return 1 book and show availability
+//return 1 book and show availability
 book1.returnBook();
 console.log(`Is "${book1.title}" available?`, book1.isAvailable);
-
-// Count number of long books
+//count number of books that are long books
 const longBooksCount = library.filter(book => book.isLongBook()).length;
 console.log("Number of long books (>300 pages):", longBooksCount);
-
-// List all the available books
+//list all the available books
 const availableBooks = library.filter(book => book.isAvailable);
 console.log("Available books:");
 availableBooks.forEach(book => {
