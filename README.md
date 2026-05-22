@@ -1,6 +1,6 @@
 # 🚀 Full-Stack Web Development: Week-by-Week Learning Roadmap
 
-Welcome to the **Week-1 to Week-6 Full-Stack Web Development Workspace**! This repository serves as a progressive hands-on learning roadmap, showcasing the transition from fundamental JavaScript logic, object-oriented concepts, and visual HTML/CSS layouts, to fully integrated Express.js & MongoDB backends.
+Welcome to the **Full-Stack Web Development Workspace**! This repository serves as a progressive hands-on learning roadmap, showcasing the transition from fundamental JavaScript logic, object-oriented concepts, and visual HTML/CSS layouts, to fully integrated, multi-role React/Express/MongoDB web applications.
 
 ---
 
@@ -13,18 +13,17 @@ To explore the code, documentation, and specific exercises in detail, use the ta
 | 📁 [Week-1](file:///Users/alampallypraneeth/week-1/week-1-1/Week-1) | Foundations of JavaScript | `Node.js` | Variables, Conditionals, OOP (Classes), Advanced Array Methods (`map`, `filter`, `reduce`). |
 | 📁 [week-2](file:///Users/alampallypraneeth/week-1/week-1-1/week-2) | Intermediate JS & Modularity | `Node.js` | Shallow vs. Deep copy mechanics, Date API, Modular CLI Todo Application. |
 | 📁 [week-3](file:///Users/alampallypraneeth/week-1/week-1-1/week-3) | Introduction to REST APIs | `Express.js`, `Mongoose` | Server initialization, Router endpoints (mock arrays), Mongoose validation schema. |
-| 📁 [BackendmongoDB](file:///Users/alampallypraneeth/week-1/week-1-1/BackendmongoDB) | Asynchronous Databases | `Express.js`, `Mongoose`, `MongoDB` | Asynchronous CRUD API endpoints, Mongoose schema integration, error handling. |
+| 📁 [WEEK5](file:///Users/alampallypraneeth/week-1/week-1-1/WEEK5) | Full-Stack Blog Web Application | `React`, `Express`, `MongoDB`, `Cloudinary` | Complete MERN stack featuring role-based dashboards, authentication, JWT tokens, file uploads, and Zustand state. |
 | 📁 [Week-6](file:///Users/alampallypraneeth/week-1/week-1-1/Week-6) | Visual Grid & Flex Layouts | `HTML5`, `CSS3` | Responsive grid structure, card layouts, mountain-themed landscape layouts, and custom tabs. |
-| 📁 [E-commerce](file:///Users/alampallypraneeth/week-1/week-1-1/E-commerce) | Production-Grade API Design | `Express`, `Mongoose`, `bcrypt` | Relational Mongoose references, secure credential hashing, subdocument arrays, `.populate()` queries. |
 
 ---
 
 ## 🛠️ Global Prerequisites & Setup
 
-To run the backend servers and JavaScript CLI scripts locally, make sure you have the following prerequisites installed on your system:
+To run the backend servers, frontend development builds, and JavaScript CLI scripts locally, make sure you have the following prerequisites installed on your system:
 
 ### 1. Node.js & npm
-- Ensure you have **Node.js (v16.x or higher)** and **npm (v8.x or higher)**.
+- Ensure you have **Node.js (v18.x or higher)** and **npm (v9.x or higher)**.
 - Verify installation by running:
   ```bash
   node -v
@@ -32,12 +31,12 @@ To run the backend servers and JavaScript CLI scripts locally, make sure you hav
   ```
 
 ### 2. MongoDB Community Server
-- A local MongoDB instance is required for the `week-3`, `BackendmongoDB`, and `E-commerce` directories.
+- A local MongoDB instance is required for the `week-3` and `WEEK5` backend directories.
 - Default Connection URL: `mongodb://localhost:27017`
-- You can manage databases visually using [MongoDB Compass](https://www.mongodb.com/products/compass).
+- You can manage databases visually using [MongoDB Compass](https://www.google.com/url?sa=E&source=gmail&q=https://www.mongodb.com/products/compass).
 
-### 3. REST API Testing Tool
-- An extension like **REST Client (VS Code)** or **Postman** is highly recommended to trigger requests from the `.http` files.
+### 3. Cloudinary Account (For WEEK5 File Uploads)
+- Register a free account at [Cloudinary](https://cloudinary.com) to acquire API keys (`CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`) for image uploading in the Blog application.
 
 ---
 
@@ -50,26 +49,18 @@ To run any of the specific week's projects:
    cd /Users/alampallypraneeth/week-1/week-1-1
    ```
 
-2. **Navigate into a specific subfolder (e.g., E-commerce)**:
+2. **Navigate into a specific subfolder (e.g., WEEK5)**:
    ```bash
-   cd E-commerce
+   cd WEEK5
    ```
 
-3. **Install module dependencies**:
-   ```bash
-   npm install
-   ```
-
-4. **Launch the development server**:
-   ```bash
-   npm start
-   ```
-   *(or check the custom scripts in each folder's dedicated `package.json`!)*
+3. **Explore folder-specific guides**:
+   Each directory contains its own comprehensive **README.md** detailing its scripts, structure, and technical overview. Click on any directory link in the **Navigation Index** above to start exploring!
 
 ---
 
 > [!NOTE]
-> Each directory contains its own comprehensive **README.md** file detailing the files, setup, test cases, and technical descriptions. Click on any directory link in the **Navigation Index** above to start exploring!
+> This workspace is actively under development. All modules are modularly organized to demonstrate distinct learning phases of a full-stack engineer.
 
 ---
 *Happy coding! Built with 💻, ☕, and modern development standards.*
